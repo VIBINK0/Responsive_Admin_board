@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey.shade600)),
                     enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey.shade600)),
+                        borderSide: BorderSide(color: Colors.grey.shade700)),
                     hintText: 'Find Your Coffee',
                     prefixIcon: Icon(Icons.search),
                   ),
