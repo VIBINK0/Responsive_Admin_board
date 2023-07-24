@@ -12,6 +12,7 @@ class MenuItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () {},
       leading: SvgPicture.asset(svglcon),
       title: Text(itemName),
     );

@@ -21,15 +21,29 @@ class HomePage extends StatelessWidget {
                     itemName: 'Dashboard',
                     svglcon: 'assets/icons/menu_dashboard.svg',
                   ),
+                  const MenuItems(
+                    itemName: 'Dashboard',
+                    svglcon: 'assets/icons/menu_dashboard.svg',
+                  ),
+                  const MenuItems(
+                    itemName: 'Dashboard',
+                    svglcon: 'assets/icons/menu_dashboard.svg',
+                  ),
+                  const MenuItems(
+                    itemName: 'Dashboard',
+                    svglcon: 'assets/icons/menu_dashboard.svg',
+                  ),
+                  const MenuItems(
+                    itemName: 'Dashboard',
+                    svglcon: 'assets/icons/menu_dashboard.svg',
+                  ),
                 ],
               ),
             ),
             Expanded(
               //it takes 5/6 screen space
               flex: 5,
-              child: Container(
-                color: Colors.red,
-              ),
+              child: Container(),
             ),
           ],
         ),
