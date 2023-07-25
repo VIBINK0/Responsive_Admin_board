@@ -35,4 +35,5 @@ class OtherIcons {
 class AssetImages {
   String logo = 'assets/images/logo.png';
   String proile = 'assets/images/profile_pic.png';
+  String proilee = 'assets/images/profile_pic.png';
 }
