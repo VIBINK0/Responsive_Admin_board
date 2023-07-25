@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_one/util/classes.dart';
 
 import '../widgets/menu_items.dart';
 
@@ -15,11 +16,11 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   DrawerHeader(
-                    child: Image.asset('assets/images/logo.png'),
+                    child: Image.asset(AssetImages().logo),
                   ),
-                  const MenuItems(
+                  MenuItems(
                     itemName: 'Dashboard',
-                    svglcon: 'assets/icons/menu_dashboard.svg',
+                    svglcon: MenuIcon().dashboard,
                   ),
                   const MenuItems(
                     itemName: 'Dashboard',
