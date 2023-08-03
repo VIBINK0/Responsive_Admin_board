@@ -19,4 +19,12 @@ class AppAssets {
   static const mediaStorageFile = 'assets/icons/media.svg';
   static const otherStorageFile = 'assets/icons/unknown.svg';
   static const unknownStorageFile = 'assets/icons/unknown.svg';
+
+  static const xdFile = 'assets/icons/xd_file.svg';
+  static const figmaFile = 'assets/icons/Figma_file.svg';
+  static const document = 'assets/icons/Documents.svg';
+  static const soundFile = 'assets/icons/unknown.svg';
+  static const mediaFile = 'assets/icons/sound_file.svg';
+  static const salesPdf = 'assets/icons/unknown.svg';
+  static const excellFile = 'assets/icons/excel_file.svg';
 }

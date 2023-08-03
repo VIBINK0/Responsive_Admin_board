@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           ),
           headlineMedium: TextStyle(
             fontWeight: FontWeight.w700,
-            fontSize: 24,
+            fontSize: 20,
           ),
           headlineSmall: TextStyle(
             fontWeight: FontWeight.w700,
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           ),
           labelMedium: TextStyle(
             fontSize: 14,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.bold,
           ),
           labelSmall: TextStyle(
             fontSize: 12,

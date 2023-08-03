@@ -18,7 +18,7 @@ class MyAppBar extends StatelessWidget {
         children: [
           Text(
             AppStrings.dashboard,
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: AppColors.primaryTextColor,
                 ),
           ),
