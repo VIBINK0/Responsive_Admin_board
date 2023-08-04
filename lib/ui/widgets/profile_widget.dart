@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_one/responce.dart';
 
 import '../../util/app_assets.dart';
 import '../../util/app_colors.dart';
@@ -28,17 +29,18 @@ class ProfileWidget extends StatelessWidget {
         children: [
           Image.asset(AppAssets.profilePic),
           const SizedBox(width: AppSize.defaultSize / 4),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: AppSize.defaultSize * 0.3),
-            child: Text(
-              AppStrings.profileName,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall
-                  ?.copyWith(color: AppColors.primaryTextColor),
+          if (!Responce.ismobile(context))
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: AppSize.defaultSize * 0.3),
+              child: Text(
+                AppStrings.profileName,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(color: AppColors.primaryTextColor),
+              ),
             ),
-          ),
           const SizedBox(width: AppSize.defaultSize / 4),
           const Icon(Icons.keyboard_arrow_down,
               color: AppColors.primaryIconColor),

@@ -4,4 +4,5 @@ class AppSize {
   static const textBoxSize = 56.0;
   static const buttonHeight = 48.0;
   static const buttonWidth = 144.0;
+  static const containerHeignt = 160.0;
 }

@@ -16,12 +16,14 @@ class MainWidget extends StatelessWidget {
         horizontal: AppSize.defaultSize,
         vertical: AppSize.defaultSize,
       ),
-      child: const Column(
-        children: [
-          MyAppBar(),
-          SizedBox(height: AppSize.defaultSize),
-          BodyWidget(),
-        ],
+      child: const SingleChildScrollView(
+        child: Column(
+          children: [
+            MyAppBar(),
+            SizedBox(height: AppSize.defaultSize),
+            BodyWidget(),
+          ],
+        ),
       ),
     );
   }

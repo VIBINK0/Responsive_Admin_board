@@ -33,7 +33,7 @@ class ChartWidget extends StatelessWidget {
                     value: 22,
                   ),
                   PieChartSectionData(
-                    color: Colors.black,
+                    color: Colors.pink,
                     radius: 13,
                     value: 19,
                     showTitle: false,
@@ -45,7 +45,7 @@ class ChartWidget extends StatelessWidget {
                     value: 16,
                   ),
                   PieChartSectionData(
-                    color: AppColors.primaryColor.withOpacity(0.1),
+                    color: AppColors.primaryColor.withOpacity(0.5),
                     radius: 25,
                     showTitle: false,
                     value: 13,

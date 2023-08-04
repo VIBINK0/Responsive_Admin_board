@@ -22,37 +22,37 @@ final List files = [
   FileModel(
     icon: AppAssets.figmaFile,
     label: 'Figma File',
-    date: '01-03-2021',
+    date: '10-05-2021',
     size: 3.5,
   ),
   FileModel(
     icon: AppAssets.document,
     label: 'Document',
-    date: '01-03-2021',
+    date: '11-05-2021',
     size: 3.5,
   ),
   FileModel(
     icon: AppAssets.soundFile,
     label: 'Sound File',
-    date: '01-03-2021',
+    date: '20-09-2021',
     size: 3.5,
   ),
   FileModel(
     icon: AppAssets.mediaFile,
     label: 'Media File',
-    date: '01-03-2021',
+    date: '01-01-2022',
     size: 3.5,
   ),
   FileModel(
     icon: AppAssets.salesPdf,
     label: 'Sales PDF',
-    date: '01-03-2021',
+    date: '19-02-2022',
     size: 3.5,
   ),
   FileModel(
     icon: AppAssets.excellFile,
     label: 'Excell File',
-    date: '01-03-2021',
+    date: '30-03-2022',
     size: 3.5,
   ),
 ];
