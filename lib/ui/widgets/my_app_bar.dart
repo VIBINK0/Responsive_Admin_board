@@ -24,17 +24,13 @@ class MyAppBar extends StatelessWidget {
                     color: AppColors.primaryTextColor,
                   ),
             ),
-          const Spacer(),
-          if (!Responce.ismobile(context))
-            const SizedBox(
-              width: AppSize.defaultSize * 17,
+          if (Responce.ismobile(context)) ...[
+            const Spacer(),
+            const Expanded(
+              //width: AppSize.defaultSize * 17,
               child: SearchWidget(),
             ),
-          if (Responce.ismobile(context))
-            const SizedBox(
-              width: double.infinity,
-              child: SearchWidget(),
-            ),
+          ],
           const SizedBox(width: AppSize.defaultSize),
           const ProfileWidget(),
         ],
