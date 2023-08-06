@@ -8,8 +8,10 @@ import '../../util/app_size.dart';
 import '../../util/app_strings.dart';
 
 class MyAppBar extends StatelessWidget {
+  final Function() onpressed;
   const MyAppBar({
     super.key,
+    required this.onpressed,
   });
 
   @override
@@ -17,20 +19,26 @@ class MyAppBar extends StatelessWidget {
     return SafeArea(
       child: Row(
         children: [
-          if (!Responce.ismobile(context))
+          if (!Responce.isdesktop(context))
+            IconButton(
+                onPressed: onpressed,
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                )),
+          if (Responce.isdesktop(context)) ...[
             Text(
               AppStrings.dashboard,
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     color: AppColors.primaryTextColor,
                   ),
             ),
-          if (Responce.ismobile(context)) ...[
             const Spacer(),
-            const Expanded(
-              //width: AppSize.defaultSize * 17,
-              child: SearchWidget(),
-            ),
           ],
+          const Expanded(
+            //width: AppSize.defaultSize * 17,
+            child: SearchWidget(),
+          ),
           const SizedBox(width: AppSize.defaultSize),
           const ProfileWidget(),
         ],

@@ -22,6 +22,7 @@ class DrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
+      width: MediaQuery.of(context).size.width / 2,
       color: AppColors.secondaryColor,
       child: SingleChildScrollView(
         child: Column(

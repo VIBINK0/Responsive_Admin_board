@@ -58,13 +58,14 @@ class StorageTile extends StatelessWidget {
               ),
             ],
           ),
-          const Spacer(),
-          Text(
-            '${storageModel.fileSize}GB',
-            style: Theme.of(context)
-                .textTheme
-                .labelMedium
-                ?.copyWith(color: AppColors.primaryTextColor),
+          Expanded(
+            child: Text(
+              '${storageModel.fileSize}GB',
+              style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                    color: AppColors.primaryTextColor,
+                  ),
+              textAlign: TextAlign.right,
+            ),
           ),
         ],
       ),

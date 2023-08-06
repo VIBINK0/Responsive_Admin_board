@@ -15,11 +15,23 @@ class MyFiles extends StatelessWidget {
       children: [
         const FileHeader(),
         const SizedBox(height: AppSize.defaultSize),
-        const CardWidget(),
+        const Responce(
+          desktop: CardWidget(
+            crossaxis: 4,
+          ),
+          tablet: CardWidget(
+            crossaxis: 2,
+            mainspace: AppSize.defaultSize,
+          ),
+          mobile: CardWidget(
+            crossaxis: 2,
+            mainspace: AppSize.defaultSize,
+          ),
+        ),
         const SizedBox(height: AppSize.defaultSize),
         const RecentFiles(),
         if (Responce.ismobile(context))
-          const SizedBox(width: AppSize.defaultSize),
+          const SizedBox(height: AppSize.defaultSize),
         if (Responce.ismobile(context)) const StorageWidget(),
       ],
     );

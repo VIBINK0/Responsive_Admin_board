@@ -6,18 +6,28 @@ import 'package:flutter_project_one/util/app_size.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CardWidget extends StatelessWidget {
-  const CardWidget({super.key});
+  final int crossaxis;
+  final double crosssapce;
+  final double mainspace;
+  const CardWidget({
+    super.key,
+    required this.crossaxis,
+    this.crosssapce = AppSize.defaultSize,
+    this.mainspace = 0.0,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       padding: EdgeInsets.zero,
       itemCount: demoMyFiles.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        crossAxisSpacing: AppSize.defaultSize,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossaxis,
+        crossAxisSpacing: crosssapce,
         childAspectRatio: 1.4,
+        mainAxisSpacing: mainspace,
       ),
       itemBuilder: (_, int index) => _FileCard(demoMyFiles[index]),
     );
@@ -72,7 +82,6 @@ class _FileCard extends StatelessWidget {
           ),
           MyProgressIndicator(color: myFile.color, width: myFile.percentage),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 '${myFile.numOfFiles} Files',
@@ -82,13 +91,16 @@ class _FileCard extends StatelessWidget {
                     ?.copyWith(color: AppColors.primaryTextColor),
                 overflow: TextOverflow.ellipsis,
               ),
-              Text(
-                '${myFile.totalStorage}GB',
-                style: Theme.of(context)
-                    .textTheme
-                    .labelSmall
-                    ?.copyWith(color: AppColors.primaryTextColor),
-                overflow: TextOverflow.ellipsis,
+              Expanded(
+                child: Text(
+                  '${myFile.totalStorage}GB',
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelSmall
+                      ?.copyWith(color: AppColors.primaryTextColor),
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.end,
+                ),
               ),
             ],
           ),

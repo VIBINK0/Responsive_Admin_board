@@ -4,8 +4,10 @@ import 'package:flutter_project_one/ui/widgets/my_app_bar.dart';
 import 'package:flutter_project_one/util/app_size.dart';
 
 class MainWidget extends StatelessWidget {
+  final Function() onpressed;
   const MainWidget({
     super.key,
+    required this.onpressed,
   });
 
   @override
@@ -16,12 +18,14 @@ class MainWidget extends StatelessWidget {
         horizontal: AppSize.defaultSize,
         vertical: AppSize.defaultSize,
       ),
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         child: Column(
           children: [
-            MyAppBar(),
-            SizedBox(height: AppSize.defaultSize),
-            BodyWidget(),
+            MyAppBar(
+              onpressed: onpressed,
+            ),
+            const SizedBox(height: AppSize.defaultSize),
+            const BodyWidget(),
           ],
         ),
       ),
