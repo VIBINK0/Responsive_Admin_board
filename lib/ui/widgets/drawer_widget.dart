@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_one/responce.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../util/app_assets.dart';
@@ -6,6 +7,8 @@ import '../../util/app_colors.dart';
 import '../../util/app_strings.dart';
 
 class DrawerWidget extends StatelessWidget {
+  final Function() onpressed;
+
   final List<Map<String, dynamic>> _drawerItems = [
     {'label': AppStrings.dashboard, 'icon': AppAssets.dashboardMenu},
     {'label': AppStrings.transaction, 'icon': AppAssets.transMenu},
@@ -16,7 +19,7 @@ class DrawerWidget extends StatelessWidget {
     {'label': AppStrings.profile, 'icon': AppAssets.profileMenu},
     {'label': AppStrings.settings, 'icon': AppAssets.settingsMenu},
   ];
-  DrawerWidget({super.key});
+  DrawerWidget({super.key, required this.onpressed});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +30,14 @@ class DrawerWidget extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            if (!Responce.isdesktop(context))
+              Align(
+                alignment: Alignment.topRight,
+                child: IconButton(
+                  onPressed: onpressed,
+                  icon: const Icon(Icons.close),
+                ),
+              ),
             DrawerHeader(
               child: Image.asset(AppAssets.logo),
             ),

@@ -16,9 +16,9 @@ class BodyWidget extends StatelessWidget {
           flex: 5,
           child: MyFiles(),
         ),
-        if (!Responce.ismobile(context))
+        if (Responce.isdesktop(context))
           const SizedBox(width: AppSize.defaultSize),
-        if (!Responce.ismobile(context))
+        if (Responce.isdesktop(context))
           const Expanded(
             flex: 2,
             child: StorageWidget(),

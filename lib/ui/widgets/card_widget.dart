@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_one/model/could_storage.dart';
-import 'package:flutter_project_one/ui/my_progress_indicator.dart';
+import 'package:flutter_project_one/ui/widgets/my_progress_indicator.dart';
 import 'package:flutter_project_one/util/app_colors.dart';
 import 'package:flutter_project_one/util/app_size.dart';
 import 'package:flutter_svg/svg.dart';

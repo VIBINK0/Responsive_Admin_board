@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_one/ui/widgets/app_button.dart';
+import 'package:flutter_project_one/ui/widgets/popup.dart';
 import 'package:flutter_project_one/util/app_colors.dart';
 
 class FileHeader extends StatelessWidget {
@@ -19,7 +20,14 @@ class FileHeader extends StatelessWidget {
         ),
         AppButton.icon(
           label: 'Add',
-          onpressed: () {},
+          onpressed: () {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) => const PopupBox(),
+            );
+            // Navigator.of(context).push(
+            //     MaterialPageRoute(builder: (context) => const PopupBox()));
+          },
           icon: Icons.add,
         ),
       ],

@@ -40,7 +40,7 @@ class AppButton extends StatelessWidget {
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(color),
                 ),
-                onPressed: () {},
+                onPressed: onpressed,
                 icon: const Icon(Icons.add, color: AppColors.primaryTextColor),
                 label: Text(
                   label,
@@ -51,7 +51,7 @@ class AppButton extends StatelessWidget {
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(color),
                 ),
-                onPressed: () {},
+                onPressed: onpressed,
                 child: Text(
                   label,
                   style: const TextStyle(color: AppColors.primaryTextColor),

@@ -12,13 +12,19 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldkey,
-      drawer: DrawerWidget(),
+      drawer: DrawerWidget(
+        onpressed: () {
+          _scaffoldkey.currentState!.openEndDrawer();
+        },
+      ),
       body: SafeArea(
           child: Row(
         children: [
           if (Responce.isdesktop(context))
             Expanded(
-              child: DrawerWidget(),
+              child: DrawerWidget(
+                onpressed: () {},
+              ),
             ),
           Expanded(
             flex: 5,

@@ -20,8 +20,8 @@ class MyFiles extends StatelessWidget {
             crossaxis: 4,
           ),
           tablet: CardWidget(
-            crossaxis: 2,
-            mainspace: AppSize.defaultSize,
+            crossaxis: 4,
+            // mainspace: AppSize.defaultSize,
           ),
           mobile: CardWidget(
             crossaxis: 2,
@@ -30,9 +30,9 @@ class MyFiles extends StatelessWidget {
         ),
         const SizedBox(height: AppSize.defaultSize),
         const RecentFiles(),
-        if (Responce.ismobile(context))
+        if (!Responce.isdesktop(context))
           const SizedBox(height: AppSize.defaultSize),
-        if (Responce.ismobile(context)) const StorageWidget(),
+        if (!Responce.isdesktop(context)) const StorageWidget(),
       ],
     );
   }
