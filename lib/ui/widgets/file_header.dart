@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_one/model/files_model.dart';
 import 'package:flutter_project_one/ui/widgets/app_button.dart';
 import 'package:flutter_project_one/ui/widgets/popup.dart';
 import 'package:flutter_project_one/util/app_colors.dart';
 
 class FileHeader extends StatelessWidget {
-  const FileHeader({super.key});
+  final Function(FileModel) onTap;
+  const FileHeader({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +22,22 @@ class FileHeader extends StatelessWidget {
         ),
         AppButton.icon(
           label: 'Add',
-          onpressed: () {
-            showDialog(
+          onpressed: () async {
+            final result = await showDialog(
               context: context,
               builder: (BuildContext context) => const PopupBox(),
             );
-            // Navigator.of(context).push(
-            //     MaterialPageRoute(builder: (context) => const PopupBox()));
+
+            if (result != null) {
+              onTap(
+                FileModel(
+                  id: '',
+                  name: result['name'],
+                  date: result['date'],
+                  size: double.parse('${result['size']}'),
+                ),
+              );
+            }
           },
           icon: Icons.add,
         ),
