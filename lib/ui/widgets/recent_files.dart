@@ -73,13 +73,15 @@ class RecentFiles extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(width: AppSize.defaultSize),
-                              Text(
-                                fm.label,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .labelMedium
-                                    ?.copyWith(
-                                        color: AppColors.primaryTextColor),
+                              Expanded(
+                                child: Text(
+                                  fm.label,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .labelMedium
+                                      ?.copyWith(
+                                          color: AppColors.primaryTextColor),
+                                ),
                               ),
                             ],
                           ),

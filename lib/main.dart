@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_one/ui/landing_page.dart';
 import 'package:flutter_project_one/util/app_colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,37 +14,37 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         primaryColor: AppColors.primaryColor,
         scaffoldBackgroundColor: AppColors.bgColor,
-        textTheme: const TextTheme(
-          headlineLarge: TextStyle(
+        textTheme: GoogleFonts.robotoTextTheme().copyWith(
+          headlineLarge: GoogleFonts.robotoSlab(
             fontWeight: FontWeight.w700,
             fontSize: 24,
           ),
-          headlineMedium: TextStyle(
+          headlineMedium: GoogleFonts.robotoSlab(
             fontWeight: FontWeight.w700,
             fontSize: 20,
           ),
-          headlineSmall: TextStyle(
+          headlineSmall: GoogleFonts.robotoSlab(
             fontWeight: FontWeight.w700,
             fontSize: 18,
           ),
-          bodyLarge: TextStyle(
+          bodyLarge: GoogleFonts.robotoSlab(
             fontSize: 16,
             fontWeight: FontWeight.w400,
           ),
-          bodyMedium: TextStyle(
+          bodyMedium: GoogleFonts.robotoSlab(
             fontSize: 24,
             fontWeight: FontWeight.w700,
           ),
-          bodySmall: TextStyle(
-            fontSize: 16,
+          bodySmall: GoogleFonts.robotoSlab(
+            fontSize: 14,
             fontWeight: FontWeight.w500,
           ),
-          labelMedium: TextStyle(
+          labelMedium: GoogleFonts.robotoSlab(
             fontSize: 14,
             fontWeight: FontWeight.w300,
           ),
-          labelSmall: TextStyle(
-            fontSize: 12,
+          labelSmall: GoogleFonts.robotoSlab(
+            fontSize: 11,
             fontWeight: FontWeight.w400,
             color: Colors.white38,
           ),

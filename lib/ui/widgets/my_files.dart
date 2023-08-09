@@ -18,10 +18,10 @@ class MyFiles extends StatelessWidget {
         const Responce(
           desktop: CardWidget(
             crossaxis: 4,
+            // childratio: MediaQuery.of(context).size.width > 1100 ? 1.4 : 0.7,
           ),
           tablet: CardWidget(
             crossaxis: 4,
-            // mainspace: AppSize.defaultSize,
           ),
           mobile: CardWidget(
             crossaxis: 2,

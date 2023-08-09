@@ -9,11 +9,13 @@ class CardWidget extends StatelessWidget {
   final int crossaxis;
   final double crosssapce;
   final double mainspace;
+  final double childratio;
   const CardWidget({
     super.key,
     required this.crossaxis,
     this.crosssapce = AppSize.defaultSize,
     this.mainspace = 0.0,
+    this.childratio = 1.4,
   });
 
   @override
@@ -26,7 +28,7 @@ class CardWidget extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossaxis,
         crossAxisSpacing: crosssapce,
-        childAspectRatio: 1.4,
+        childAspectRatio: childratio,
         mainAxisSpacing: mainspace,
       ),
       itemBuilder: (_, int index) => _FileCard(demoMyFiles[index]),
