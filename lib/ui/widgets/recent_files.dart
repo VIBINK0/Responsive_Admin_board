@@ -82,27 +82,13 @@ class RecentFiles extends StatelessWidget {
                                           color: AppColors.primaryTextColor))),
                               DataCell(
                                 Expanded(
-                                  child: Row(
-                                    children: [
-                                      Text('${fm.size}MB',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelMedium
-                                              ?.copyWith(
-                                                  color: AppColors
-                                                      .primaryTextColor)),
-                                      const SizedBox(
-                                          width: AppSize.defaultSize / 2),
-                                      SizedBox(
-                                        // height: AppSize.defaultIconSize / 2,
-                                        // width: AppSize.defaultIconSize / 2,
-                                        child: IconButton(
-                                          onPressed: () {},
-                                          icon: const Icon(Icons.delete),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                  child: Text('${fm.size}MB',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .labelMedium
+                                          ?.copyWith(
+                                              color:
+                                                  AppColors.primaryTextColor)),
                                 ),
                               ),
                             ],
